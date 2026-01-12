@@ -72,6 +72,6 @@ def vehicle(num: str):
         return f"❌ An error occurred while fetching the RC details: {e}"
 
 
-vehic = input("Enter Vehicle Number: ").strip().upper()
-a = vehicle(vehic)
-print(a)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+
