@@ -8,10 +8,11 @@ def home():
     return "API is running 🚀"
 
 @app.route("/vehicle")
-def get_vehicle():
+def vehicle_api():
     number = request.args.get("number")
     if not number:
-        return {"error": "number missing"}
+        return jsonify({"error": "number missing"})
 
     data = vehicle(number)
     return jsonify(data)
+
